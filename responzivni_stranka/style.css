@@ -1,0 +1,394 @@
+:root {
+  --text-color-dark: #000;
+  --text-color-light: #fff;
+  --link-color-lighter: #efa69d;
+  --link-color-darker: #e9877b;
+  --background-color-dark: #333333;
+  --background-color-light: #f2f2f2;
+  --background-brown-light: #644b4f;
+  --background-brown-dark: #33292a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  padding: 0 10%;
+}
+
+.padding-50px {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* ---------------------------------------------------- NAVIGATION */
+
+.navigation {
+  background-color: var(--background-brown-dark);
+  height: 65px;
+}
+
+.nav-list {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+}
+
+.navigation-item {
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.navigation-item a {
+  text-decoration: none;
+  color: var(--text-color-light);
+}
+
+.burger-menu-wrapper {
+  width: 50px;
+  height: 40px;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .burger-menu-wrapper {
+    display: block;
+  }
+}
+
+/* ----------------------------------------------------
+HERO SECTION */
+
+.hero-section {
+  background-image: url(./images/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.hero-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.hero-text {
+  color: var(--text-color-light);
+  text-align: right;
+  font-size: 40px;
+  line-height: 55px;
+}
+
+/* @media (max-width: 768px) {
+  .hero-wrapper {
+    display: block;
+  }
+} */
+
+/* ---------------------------------------------------- ABOUT US SECTION*/
+.about-us-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.about-us-text {
+  flex: 1;
+}
+
+.about-us-text h2 {
+  margin-bottom: 30px;
+}
+
+.about-us-image {
+  flex: 1;
+  max-height: 500px;
+}
+
+@media (max-width: 768px) {
+  .about-us-wrapper {
+    flex-direction: column;
+  }
+
+  .about-us-text {
+    margin-bottom: 50px;
+  }
+}
+
+/* ---------------------------------------------------- WHAT WE DO SECTION*/
+
+.what-we-do {
+  background-color: var(--background-brown-dark);
+  color: var(--text-color-light);
+}
+
+.what-we-do-text {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.what-we-do-text h2 {
+  margin-bottom: 30px;
+}
+
+.what-we-do-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activity-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.activity-icon-wrapper {
+  width: 80px;
+}
+
+.activity-icon-wrapper {
+  margin-bottom: 10px;
+}
+
+.activity-wrapper span {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .what-we-do-icons {
+    flex-direction: column;
+  }
+}
+
+/* ---------------------------------------------------- OUR TRIPS SECTION */
+
+.our-trips-wrapper {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.our-trips-header {
+  height: 100%;
+  font-weight: bold;
+  background-color: var(--background-color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .our-trips-wrapper {
+    display: block;
+  }
+  .our-trips-header {
+    height: 80px;
+  }
+}
+
+/* ----------------------------------------------------  WHERE TO GO SECTION*/
+
+.where-to-go-wrapper {
+  background-color: var(--background-brown-light);
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  color: var(--text-color-light);
+}
+
+.where-to-go-h2 {
+  flex: 1;
+}
+
+.where-to-go-text {
+  flex: 3;
+}
+
+.contact-us {
+  margin: 15px 0;
+}
+
+.where-to-go-button {
+  padding: 5px 0;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: var(--background-color-light);
+  width: 150px;
+}
+
+.where-to-go-button a {
+  text-decoration: none;
+  color: var(--text-color-dark);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .where-to-go-wrapper {
+    flex-direction: column;
+  }
+  .where-to-go-button {
+    margin-top: 60px;
+  }
+}
+
+/* ---------------------------------------------------- REVIEWS SECTION */
+
+.reviews-wrapper {
+  color: var(--text-color-dark);
+}
+
+.first-item {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.person-item {
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.person-item h2 {
+  margin-bottom: 30px;
+}
+
+.person-item p {
+  font-size: 16px;
+}
+
+.guests-wrapper {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 100px;
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+.person-item {
+  flex: 1;
+}
+
+.person-item .person-img-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.person-img-wrapper img {
+  border-radius: 50%;
+}
+
+.person-name {
+  font-weight: bold;
+}
+
+.frank-img-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.frank-img-wrapper img {
+  border-radius: 50%;
+}
+
+.person-item p {
+  margin-bottom: 50px;
+}
+
+.frank-name {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .guests-wrapper {
+    display: block;
+  }
+
+  .person-item {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 0px;
+  }
+}
+
+/* ---------------------------------------------------- GALLERY SECTION */
+
+.gallery-wrapper {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+  .gallery-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* ---------------------------------------------------- CONTACT SECTION */
+
+.footer {
+  background-color: var(--background-color-dark);
+}
+
+.contact-wrapper {
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-link a {
+  color: var(--link-color-darker);
+  padding-bottom: 10px;
+}
+
+.rights-reserved {
+  padding-top: 10px;
+  color: var(--text-color-light);
+}
+
+/* ---------------------------------------------------- MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+}
